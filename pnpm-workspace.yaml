@@ -1,0 +1,29 @@
+packages: []
+catalogs:
+  dev:
+    bumpp: ^10.4.1
+    pncat: ^0.10.2
+    react: ^19.2.4
+    simple-git-hooks: ^2.13.1
+    taze: ^19.9.2
+    tsx: ^4.21.0
+    typescript: ^5.9.3
+  lint:
+    '@eslint-react/eslint-plugin': ^2.13.0
+    '@octohash/eslint-config': ^0.2.3
+    eslint: ^10.0.0
+    eslint-plugin-react-hooks: ^7.0.1
+    eslint-plugin-react-refresh: ^0.5.0
+    lint-staged: ^16.2.7
+  prod:
+    '@raycast/api': ^1.104.6
+    '@raycast/utils': ^2.2.2
+    run-applescript: ^7.1.0
+  test:
+    vitest: ^4.0.18
+  types:
+    '@types/node': ^25.3.0
+    '@types/react': ^19.2.14
+onlyBuiltDependencies:
+  - esbuild
+  - simple-git-hooks

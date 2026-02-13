@@ -1,0 +1,76 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "ext-name",
+  "type": "module",
+  "title": "display-name",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.30.1",
+  "description": "",
+  "author": "jinghaihan",
+  "license": "MIT",
+  "homepage": "https://github.com/jinghaihan/raycast-ext-name#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghaihan/raycast-ext-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinghaihan/raycast-ext-name/issues"
+  },
+  "keywords": [],
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "index",
+      "title": "command-name",
+      "description": "",
+      "mode": "view"
+    }
+  ],
+  "preferences": [],
+  "scripts": {
+    "dev": "ray develop",
+    "build": "ray build -e dist",
+    "deps": "taze major -I",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "release": "bumpp",
+    "generate": "tsx ./scripts/generate.ts",
+    "prepare": "simple-git-hooks && pnpm generate",
+    "bootstrap": "pnpm install",
+    "prepublishOnly": "pnpm build",
+    "raycast:publish": "@raycast/api publish"
+  },
+  "platforms": [
+    "macOS"
+  ],
+  "dependencies": {
+    "@raycast/api": "catalog:prod",
+    "@raycast/utils": "catalog:prod",
+    "run-applescript": "catalog:prod"
+  },
+  "devDependencies": {
+    "bumpp": "catalog:dev",
+    "pncat": "catalog:dev",
+    "react": "catalog:dev",
+    "simple-git-hooks": "catalog:dev",
+    "taze": "catalog:dev",
+    "tsx": "catalog:dev",
+    "typescript": "catalog:dev",
+    "@eslint-react/eslint-plugin": "catalog:lint",
+    "@octohash/eslint-config": "catalog:lint",
+    "eslint": "catalog:lint",
+    "eslint-plugin-react-hooks": "catalog:lint",
+    "eslint-plugin-react-refresh": "catalog:lint",
+    "lint-staged": "catalog:lint",
+    "vitest": "catalog:test",
+    "@types/node": "catalog:types",
+    "@types/react": "catalog:types"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
